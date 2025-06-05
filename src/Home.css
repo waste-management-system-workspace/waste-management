@@ -1,7 +1,7 @@
 /* Modern Home Page Styles */
 .home-container {
   min-height: 100vh;
-  background: url('./assets/Home_Banner-4.jpg') no-repeat center center fixed;
+  background: url('./assets/istockphoto.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   overflow-x: hidden;
@@ -129,7 +129,8 @@
 
 /* Hero Section */
 .hero-section {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; 
+
 }
 
 .hero-content {
@@ -150,10 +151,9 @@
   margin: 0 0 1rem 0;
   line-height: 1.1;
   background: linear-gradient(135deg, #ffffff, #f0f8ff);
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   animation: fadeInUp 0.8s ease-out;
+  color: white;
 }
 
 .hero-subtitle {
@@ -287,7 +287,7 @@
 }
 
 .action-btn {
-  background: rgba(255, 255, 255, 0.15);
+  background: #0f2e2c; /* Same as feature cards for consistency */
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -317,9 +317,9 @@
 }
 
 .action-btn:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-icon-wrapper {
@@ -391,7 +391,7 @@
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.12);
+  background: #0f2e2c; /* New solid background color */
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
@@ -479,12 +479,17 @@
 
 /* Impact Section */
 .impact-section {
-  background: rgba(255, 255, 255, 0.05);
+  background: #0f2e2c;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   padding: 3rem;
   margin-bottom: 3rem;
+}
+.impact-section:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .impact-content {

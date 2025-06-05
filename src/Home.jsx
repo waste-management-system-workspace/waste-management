@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Home.css';
-import HomeBanner from './assets/Home_Banner-4.jpg';
 
 
 export default function Home({ setIsAuthenticated }) {
