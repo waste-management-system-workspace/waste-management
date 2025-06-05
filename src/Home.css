@@ -25,8 +25,9 @@
 
 /* Header Styles */
 .app-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  background: rgba(15, 46, 44, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(79, 209, 199, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 2rem;
   position: sticky;
@@ -129,8 +130,35 @@
 
 /* Hero Section */
 .hero-section {
-  margin-bottom: 4rem; 
-
+  margin-bottom: 4rem;
+  background: rgba(15, 46, 44, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(79, 209, 199, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  width: 100%; 
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #4fd1c7, #81e6d9);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.hero-section:hover::before {
+  transform: scaleX(1);
+}
+.hero-section:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero-content {

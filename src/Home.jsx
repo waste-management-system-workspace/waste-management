@@ -80,6 +80,7 @@ export default function Home({ setIsAuthenticated }) {
                 </div>
               </div>
             </div>
+            
             <div className="hero-visual">
               <div className="floating-elements">
                 <div className="floating-icon" style={{'--delay': '0s'}}>♻️</div>
