@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Home.css';
-
+import RecyclingBanner from './assets/Recycling-banner.webp';
 
 export default function Home({ setIsAuthenticated }) {
   const { t, i18n } = useTranslation();
@@ -24,8 +24,15 @@ export default function Home({ setIsAuthenticated }) {
   }, [targetAmount]);
   
   return (
-    <div className="home-container">
-      {/* Header with glassmorphism effect */}
+    <div className="home-container" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${RecyclingBanner})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+      minHeight: '100vh',
+      position: 'relative',
+      overflowX: 'hidden'
+    }}>
       <header className="app-header">
         <div className="header-content">
           <div className="logo-section">
@@ -34,6 +41,18 @@ export default function Home({ setIsAuthenticated }) {
               EcoScan
             </h1>
             <div className="logo-subtitle">Smart Recycling</div>
+          </div>
+          
+          <div className="quick-actions">
+            <Link to="/scan" className="quick-action-btn" title="Scan">
+              📱
+            </Link>
+            <Link to="/rewards" className="quick-action-btn" title="Rewards">
+              🏆
+            </Link>
+            <Link to="/municipal" className="quick-action-btn" title="Municipal">
+              🏛️
+            </Link>
           </div>
           
           <div className="header-controls">
@@ -79,17 +98,6 @@ export default function Home({ setIsAuthenticated }) {
                   <div className="stat-label">points earned</div>
                 </div>
               </div>
-            </div>
-            
-            <div className="hero-visual">
-              <div className="floating-elements">
-                <div className="floating-icon" style={{'--delay': '0s'}}>♻️</div>
-                <div className="floating-icon" style={{'--delay': '1s'}}>🌿</div>
-                <div className="floating-icon" style={{'--delay': '2s'}}>🌍</div>
-                <div className="floating-icon" style={{'--delay': '0.5s'}}>💚</div>
-                <div className="floating-icon" style={{'--delay': '1.5s'}}>🍃</div>
-              </div>
-              <div className="hero-circle"></div>
             </div>
           </div>
         </section>
@@ -212,11 +220,6 @@ export default function Home({ setIsAuthenticated }) {
             <div className="footer-divider"></div>
             <div className="footer-message">
               <span className="footer-text">Making our planet greener, one scan at a time</span>
-              <div className="footer-icons">
-                <span>🌱</span>
-                <span>♻️</span>
-                <span>🌍</span>
-              </div>
             </div>
           </div>
         </div>

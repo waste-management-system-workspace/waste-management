@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './Scan.css';
+import RecyclingBanner from './assets/Recycling-banner.webp';
 
 const wasteClasses = {
   en: ['Plastic', 'Paper', 'Metal', 'Glass', 'Organic', 'E-waste'],
@@ -170,7 +171,15 @@ export default function Scan() {
   }, []);
 
   return (
-    <div className="scanner-container">
+    <div className="scanner-container" style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${RecyclingBanner}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    minHeight: '100vh',
+    position: 'relative',
+    overflowX: 'hidden'
+  }}>
       {/* Header with centered title */}
       <header className="app-header">
         <div className="header-content">

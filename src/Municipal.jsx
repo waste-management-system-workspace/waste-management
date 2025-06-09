@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './Municipal.css';
+import RecyclingBanner from './assets/Recycling-banner.webp';
+
 
 export default function Municipal() {
   const { t, i18n } = useTranslation();
@@ -99,7 +101,15 @@ export default function Municipal() {
   }
 
   return (
-    <div className="municipal-container">
+    <div className="municipal-container" style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${RecyclingBanner}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    minHeight: '100vh',
+    position: 'relative',
+    overflowX: 'hidden'
+  }}>
       {/* Header */}
       <header className="app-header">
         <div className="header-content">
@@ -108,7 +118,6 @@ export default function Municipal() {
               &larr; {t('back')}
             </Link>
             <div className="municipal-title">
-              <div className="municipal-icon">🏛️</div>
               <h1 className="app-title">{t('municipal_dashboard')}</h1>
             </div>
             <div className="header-controls">
