@@ -416,3 +416,131 @@
     font-size: 0.9rem;
   }
 }
+
+.scan-step {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #4fd1c7;
+}
+
+.quality-warning {
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid rgba(231, 76, 60, 0.4);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+.quality-warning h4 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.quality-warning ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.quality-warning li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.analysis-breakdown {
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.analysis-breakdown h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #4fd1c7;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.breakdown-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breakdown-value {
+  text-align: right;
+  max-width: 70%;
+}
+
+.material-features {
+  margin-bottom: 1.5rem;
+}
+
+.material-features h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #4fd1c7;
+}
+
+.material-features ul {
+  padding-left: 1.5rem;
+}
+
+.material-features li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.material-tips {
+  margin: 1.5rem 0;
+}
+
+.material-tips h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #4fd1c7;
+  text-align: center;
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.tip-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.tip-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .tip-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tip-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
