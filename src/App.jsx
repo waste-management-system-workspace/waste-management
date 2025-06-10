@@ -6,6 +6,7 @@ import Municipal from './Municipal';
 import Login from './Login';
 import Signup from './Signup';
 import { useState } from 'react';
+import Gamification from './SmartGamification';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -17,7 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
         <Route 
           path="/" 
-          element={isAuthenticated ? <Home /> : <Navigate to="/login" />} 
+          element={isAuthenticated ? <Home setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/login" />} 
         />
         <Route 
           path="/scan" 
@@ -31,7 +32,12 @@ function App() {
           path="/municipal" 
           element={isAuthenticated ? <Municipal /> : <Navigate to="/login" />} 
         />
+        <Route 
+          path="/gamification" 
+          element={isAuthenticated ? <Gamification setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/login" />} 
+        />
       </Routes>
+      
     </BrowserRouter>
   );
 }

@@ -53,6 +53,9 @@ export default function Home({ setIsAuthenticated }) {
             <Link to="/municipal" className="quick-action-btn" title="Municipal">
               🏛️
             </Link>
+            <Link to="/gamification" className="quick-action-btn" title="Gamification">
+              🎮
+            </Link>
           </div>
           
           <div className="header-controls">
@@ -117,7 +120,7 @@ export default function Home({ setIsAuthenticated }) {
               </div>
               <div className="btn-arrow">→</div>
             </Link>
-
+            
             <Link to="/rewards" className="action-btn rewards-btn">
               <div className="btn-icon-wrapper">
                 <span className="btn-icon">🏆</span>
@@ -129,7 +132,7 @@ export default function Home({ setIsAuthenticated }) {
               </div>
               <div className="btn-arrow">→</div>
             </Link>
-
+            
             <Link to="/municipal" className="action-btn municipal-btn">
               <div className="btn-icon-wrapper">
                 <span className="btn-icon">🏛️</span>
@@ -138,6 +141,18 @@ export default function Home({ setIsAuthenticated }) {
               <div className="btn-content">
                 <span className="btn-title">{t('municipal_portal')}</span>
                 <span className="btn-desc">View city data</span>
+              </div>
+              <div className="btn-arrow">→</div>
+            </Link>
+            
+            <Link to="/gamification" className="action-btn gamification-btn">
+              <div className="btn-icon-wrapper">
+                <span className="btn-icon">🎮</span>
+                <div className="btn-glow"></div>
+              </div>
+              <div className="btn-content">
+                <span className="btn-title">Gamification</span>
+                <span className="btn-desc">Earn rewards through challenges</span>
               </div>
               <div className="btn-arrow">→</div>
             </Link>
